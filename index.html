@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>The Choo Train Schedule</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+ 	 <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  	 
+	<script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+        <h2 class="bold"><i class="far fa-train"></i>The Choo Train Schedule</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+        
+        <div class="panel panel-success">
+          <div class="panel-heading" id= "heading">
+            <h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i> Current Train Schedule <span class="glyphicon glyphicon-hourglass">Current-Time:<i id= "current-time"></i></strong></span></h3>
+          </div>
+
+          <div class="panel-body">
+
+         <table class="table table-striped" id="schedule">
+            <thead>
+              <tr>
+                <th>Train Name</th>
+                <th>Destination</th>
+                <th>Frequency (min)</th>
+                <th>Next Arrival</th>
+              </tr>
+            </thead>
+            <section>
+              <tr>
+                <td>The Magic Train</td>
+                <td>Hogwart</td>
+                <td>50</td>
+                <td>1:00 pm</td>
+              </tr>
+            </section>
+          </table>
+       </div>
+       </div> 
+
+
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong><i class="fa  fa-list-alt"></i> Add a Train</strong></h3>
+          </div>
+          <div class="panel-body">
+            <form role="form">
+
+              <div class="form-group">
+                <label for="trainName">Train Name</label>
+                <input type="text" class="form-control" id="trainName" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="text" class="form-control" id="destination" placeholder="">
+              </div>
+
+              <div class="form-group">
+                <label for="firstTrain"> First Train Time (HH:mm-military time)</label>
+                <input type="text" class="form-control" id="firstTrain" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="Frequency">Frequency (min)</label>
+                <input type="text" class="form-control" id="frequency" placeholder="">
+              </div>
+              <button type="submit" class="btn btn-success" id="submit"><i class="fa fa-search"></i> Submit</button>
+     
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>   
+
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
